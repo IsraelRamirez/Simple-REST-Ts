@@ -1,0 +1,25 @@
+{
+    "name": "ts-mysql",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "html": "copyfiles -u 1 src/public/*.html dist",
+        "nodemon": "nodemon dist/index -e ts,html",
+        "build": "tsc && npm run html",
+        "runDev": "npm run build && npm run nodemon",
+        "start": "npm build && node dist/index"
+    },
+    "author": "Israel Ramirez",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mysql": "github:mysqljs/mysql",
+        "typescript": "^4.0.2"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.7",
+        "@types/mysql": "^2.15.15",
+        "copyfiles": "^2.3.0"
+    }
+}
